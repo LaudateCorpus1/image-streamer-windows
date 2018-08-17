@@ -4,15 +4,15 @@
 These artifacts are supported on Image Streamer 4.1 and higher.     
 
 ## Golden Image Creation
-1.	Ensure that you have access to Windows 2016 R2 ISO file.
+1.	Ensure that you have access to Windows 2016 ISO file.
 
 1.	Create a server profile with “HPE - Foundation 1.0 - create empty OS Volume” as OS Deployment plan and a server hardware of desired hardware type (see section on Golden Image Compatibility below). Set an appropriate value for volume size in MiB units, say 40000 MiB. The HPE Synergy Server will be configured for access to this empty OS Volume.
 
-1.	Launch iLO Integrated Remote Console of this server and set the Windows 2016 R2 ISO file as virtual CD-ROM/DVD image file. Power on the server.
+1.	Launch iLO Integrated Remote Console of this server and set the Windows 2016 ISO file as virtual CD-ROM/DVD image file. Power on the server.
 
 1.  Windows should present an option of installing from CD/DVD. Continue with this option.
 
-1.  Install Windows 2016 R2.
+1.  Install Windows 2016 .
 
 1.  (Optional) To take a backup of this installation:
   
