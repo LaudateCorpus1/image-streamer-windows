@@ -47,8 +47,11 @@ Try
     Set-ItemProperty -Path HKLM:\System\Setup -Name Unattend -Value "S:\ISdeploy\Unattend.xml" -Type String
 
     # Create directory and SetupComplete.cmd
+    if (!(test-Path $env:windir\Setup\Scripts))
+    {
     New-Item -Path $env:windir\Setup\Scripts
-
+    }
+    
     "S:\ISdeploy\SetupComplete.cmd" | Out-File $env:windir\Setup\Scripts\SetupComplete.cmd
 
 }
