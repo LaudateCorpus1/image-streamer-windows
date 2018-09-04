@@ -36,11 +36,15 @@ Try
     $NewPartition = New-Partition -DiskNumber $RootDisk.Number -UseMaximumSize -DriveLetter S
     Format-Volume -Partition $NewPartition -FileSystem FAT32 -NewFileSystemLabel ISDEPLOY
     
+    reg export HKLM\System\MountedDevices C:\driveletters.reg
+    
     # Generalize Windows with sysprep, but quit rather than reboot or shutdown
     & $env:windir\System32\Sysprep\sysprep /generalize /oobe /quit
-
+    
+    reg import C:\driveletters.reg
+    
     # Set Windows registry for Image Streamer deployment:
-    Set-ItemProperty -Path HKLM:\System\Setup -Name Unattend -Value "S:\ISdeploy\Unattend.xml" -PropertyType REG_SZ
+    Set-ItemProperty -Path HKLM:\System\Setup -Name Unattend -Value "S:\ISdeploy\Unattend.xml" -Type String
 
     # Create directory and SetupComplete.cmd
     New-Item -Path $env:windir\Setup\Scripts
@@ -55,5 +59,3 @@ Catch
     Throw $_
 
 }
-	
-	
