@@ -49,7 +49,7 @@ Try
     # Create directory and SetupComplete.cmd
     if (!(test-Path $env:windir\Setup\Scripts))
     {
-    New-Item -Path $env:windir\Setup\Scripts
+        New-Item -path $env:windir\Setup\Scripts -ItemType "directory"
     }
     
     "S:\ISdeploy\SetupComplete.cmd" | Out-File $env:windir\Setup\Scripts\SetupComplete.cmd
