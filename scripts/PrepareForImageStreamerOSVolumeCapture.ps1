@@ -44,7 +44,7 @@ Try
     reg import C:\driveletters.reg
     
     # Set Windows registry for Image Streamer deployment:
-    Set-ItemProperty -Path HKLM:\System\Setup -Name Unattend -Value "S:\ISdeploy\Unattend.xml" -Type String
+    Set-ItemProperty -Path HKLM:\System\Setup -Name UnattendFile -Value "S:\ISdeploy\Unattend.xml" -Type String
 
     # Create directory and SetupComplete.cmd
     if (!(test-Path $env:windir\Setup\Scripts))
