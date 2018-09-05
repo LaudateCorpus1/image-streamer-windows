@@ -39,7 +39,7 @@ Try
     reg export HKLM\System\MountedDevices C:\driveletters.reg
     
     # Generalize Windows with sysprep, but quit rather than reboot or shutdown
-    & $env:windir\System32\Sysprep\sysprep /generalize /oobe /quit
+    $env:windir\System32\Sysprep\sysprep /generalize /oobe /quit
     
     reg import C:\driveletters.reg
     
