@@ -1,18 +1,18 @@
-# Image Streamer artifacts for Microsoft Windows Server 2016 and Hyper-V Server 2016
+# Image Streamer artifacts for Microsoft Windows Server 2016/2019 and Hyper-V Server 2016/2019
 
 ## Supported Image Streamer versions
-These artifacts are supported on Image Streamer 4.1 and higher.     
+The artifacts are supported on Image Streamer 4.1 and higher for 2016, 4.2 and higher for 2019.     
 
 ## Golden Image Creation
-1.	Ensure that you have access to Windows 2016 ISO file.
+1.	Ensure that you have access to Windows 2016 or 2019 ISO file.
 
 1.	Create a server profile with “HPE - Foundation 1.0 - create empty OS Volume” as OS Deployment plan and a server hardware of desired hardware type (see section on Golden Image Compatibility below). Set an appropriate value for volume size in MiB units, say 40000 MiB. The HPE Synergy Server will be configured for access to this empty OS Volume.
 
-1.	Launch iLO Integrated Remote Console of this server and set the Windows 2016 ISO file as virtual CD-ROM/DVD image file. Power on the server.
+1.	Launch iLO Integrated Remote Console of this server and set the Windows 2016 or 2019 ISO file as virtual CD-ROM/DVD image file. Power on the server.
 
 1.  Windows should present an option of installing from CD/DVD. Continue with this option.
 
-1.  Install Windows 2016 .
+1.  Install Windows 2016 or 2019.
 
 1.  (Optional) To take a backup of this installation:
   
@@ -154,6 +154,6 @@ Plan scripts can generate parts of Unattend.xml and/or generate scripts to run f
   
 ## Version History
 
-HPE - Windows - 2018-07-24
+HPE - Windows - 2018-10-26
 
-  - first version of Windows artifact bundle
+  - Windows artifact bundle for both 2016 and 2019
