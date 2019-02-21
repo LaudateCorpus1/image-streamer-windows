@@ -1,5 +1,11 @@
 # Image Streamer artifacts for Microsoft Windows Server 2016/2019 and Hyper-V Server 2016/2019
 
+## Version History
+
+HPE - Windows - 2018-10-26
+
+  - Windows artifact bundle for both 2016 and 2019
+  
 ## Supported Image Streamer versions
 The artifacts are supported on Image Streamer 4.1 and higher for 2016, 4.2 and higher for 2019.     
 
@@ -152,8 +158,4 @@ Plan scripts can generate parts of Unattend.xml and/or generate scripts to run f
 ## References
   - [Unattend.xml components](https://docs.microsoft.com/en-us/windows-hardware/customize/desktop/unattend/components-b-unattend)
   
-## Version History
 
-HPE - Windows - 2018-10-26
-
-  - Windows artifact bundle for both 2016 and 2019
