@@ -2,6 +2,10 @@
 
 ## Version History
 
+HPE - Windows - 2019-07-16
+
+  - Fixed - server-profile creation failure using Management NIC 'User defined' option
+  
 HPE - Windows - 2018-10-26
 
   - Windows artifact bundle for both 2016 and 2019
@@ -91,7 +95,19 @@ FAT 32 partition can be created either from UI using Disk Management utility (i)
 1.  Set SetupComplete.cmd location to the FAT32 partition
 
         mkdir C:\Windows\Setup\Scripts
+        echo S:\ISdeploy\SetupComplete.cmd > C:\Windows\Setup\Scripts\SetupComplete.cmdSet SetupComplete.cmd location to the FAT32 partition.   
+
+    Run the following in the Windows Command prompt (cmd.exe). Do not run it in PowerShell as it may add special characters which will cause personalization to fail.
+
+        mkdir C:\Windows\Setup\Scripts
+
         echo S:\ISdeploy\SetupComplete.cmd > C:\Windows\Setup\Scripts\SetupComplete.cmd
+
+    **OR** Run the following in PowerShell prompt 
+
+        mkdir C:\Windows\Setup\Scripts
+
+        Set-Content -Value "S:\ISdeploy\SetupComplete.cmd" -Path $env:windir\Setup\Scripts\SetupComplete.cmd
 
 1.  Shutdown the server.
 
