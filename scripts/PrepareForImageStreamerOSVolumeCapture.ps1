@@ -54,8 +54,7 @@ Try
         New-Item -path $env:windir\Setup\Scripts -ItemType "directory"
     }
     
-    "S:\ISdeploy\SetupComplete.cmd" | Out-File $env:windir\Setup\Scripts\SetupComplete.cmd
-
+    Set-Content -Value "S:\ISdeploy\SetupComplete.cmd" -Path $env:windir\Setup\Scripts\SetupComplete.cmd
 }
 
 Catch
